@@ -7,7 +7,7 @@ import PasswordForgetPage from '../PasswordForget';
 import HomePage from '../Home';
 import AccountPage from '../Account';
 import withAuthentication from '../Session/withAuthentication';
-import './index.css';
+import './App.css';
 
 const App = () =>
   <Router>
@@ -22,4 +22,3 @@ const App = () =>
   </Router>
 
 export default withAuthentication(App);
- 

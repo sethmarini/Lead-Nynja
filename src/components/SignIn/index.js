@@ -4,19 +4,26 @@ import { withRouter } from 'react-router-dom';
 import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget';
 import { auth } from '../../firebase';
+import logo from '../Images/Lead-Ninja.svg'; 
 
 const SignInPage = ({ history }) =>
-  <div>
-    <div className="row">
-      <div className="col-sm-6">
-        <h2>LeadNynja</h2>
-        <h5>A global leader in the finance industry.</h5>
+  <div className="container-fluid h-100">
+    <div className="row h-100 colBlue">
+      <div className="col-sm-6 my-auto text-center text-light colBlue">
+        <img src={logo} alt=""/>
+        <h4>We give the finance sector a simple solution to capture and analyze leads.</h4>
       </div>
-      <div className="col-sm-6">
-        <h3>Sign In</h3>
-        <SignInForm history={history} />
-        <PasswordForgetLink />
-        <SignUpLink />
+      <div className="col-sm-6 colWhite h-100">
+        <div className="row h-100">
+          <div className="col my-auto">
+            <div className="jumbotron m-5">
+              <h3 className="display-4">Sign In</h3>
+              <SignInForm history={history} />
+              <PasswordForgetLink />
+              <SignUpLink />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -72,24 +79,30 @@ class SignInForm extends Component {
       email === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          value={email}
-          onChange={event => this.setState(updateByPropertyName('email', event.target.value))}
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          value={password}
-          onChange={event => this.setState(updateByPropertyName('password', event.target.value))}
-          type="password"
-          placeholder="Password"
-        />
-        <button disabled={isInvalid} type="submit">
+      <form className="form-group" onSubmit={this.onSubmit}>
+        <div className="form-group">
+          <input
+            className="form-control"
+            value={email}
+            onChange={event => this.setState(updateByPropertyName('email', event.target.value))}
+            type="text"
+            placeholder="Email Address"
+          />
+        </div>
+        <div className="form-group">
+          <input
+            className="form-control"
+            value={password}
+            onChange={event => this.setState(updateByPropertyName('password', event.target.value))}
+            type="password"
+            placeholder="Password"
+          />
+        </div>
+        <button className="btn btn-primary" disabled={isInvalid} type="submit">
           Sign In
         </button>
 
-        { error && <p>{error.message}</p> }
+        {error && <p>{error.message}</p>}
       </form>
     );
   }
