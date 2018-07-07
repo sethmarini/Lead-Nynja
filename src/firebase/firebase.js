@@ -3,21 +3,21 @@ import 'firebase/auth';
 import 'firebase/database';
 
 const prodConfig = {
-      apiKey: "AIzaSyA1I6ToEeX97DyaNjRcdBNLKAtTPjp98Ds",
-      authDomain: "leadnynja.firebaseapp.com",
-      databaseURL: "https://leadnynja.firebaseio.com",
-      projectId: "leadnynja",
-      storageBucket: "leadnynja.appspot.com",
-      messagingSenderId: "26988618871"
+  apiKey: process.env.REACT_APP_FIREBASE_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_DOMAIN,
+  databaseURL: process.env.REACT_APP_FIREBASE__DATABASE,
+  projectId: process.env.REACT_APP_FIREBASE__ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE__SENDER_ID
 };
 
 const devConfig = {
-  apiKey: "AIzaSyA1I6ToEeX97DyaNjRcdBNLKAtTPjp98Ds",
-  authDomain: "leadnynja.firebaseapp.com",
-  databaseURL: "https://leadnynja.firebaseio.com",
-  projectId: "leadnynja",
-  storageBucket: "leadnynja.appspot.com",
-  messagingSenderId: "26988618871"
+  apiKey: process.env.REACT_APP_FIREBASE_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_DOMAIN,
+  databaseURL: process.env.REACT_APP_FIREBASE__DATABASE,
+  projectId: process.env.REACT_APP_FIREBASE__ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE__SENDER_ID
 };
 
 const config = process.env.NODE_ENV === 'production'
