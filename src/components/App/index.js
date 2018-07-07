@@ -6,6 +6,8 @@ import SignInPage from '../SignIn';
 import PasswordForgetPage from '../PasswordForget';
 import HomePage from '../Home';
 import AccountPage from '../Account';
+import AnalyticsPage from '../Analytics';
+import CalendarPage from '../Calendar';
 import withAuthentication from '../Session/withAuthentication';
 import './App.css';
 
@@ -18,6 +20,8 @@ const App = () =>
       <Route exact path={'/pw-forget'} component={() => <PasswordForgetPage />} />
       <Route exact path={'/home'} component={() => <HomePage />} />
       <Route exact path={'/account'} component={() => <AccountPage />} />
+      <Route exact path={'/analytics'} component={() => <AnalyticsPage />} />
+      <Route exact path={'/calendar'} component={() => <CalendarPage />} />
     </div>
   </Router>
 

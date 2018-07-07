@@ -22,8 +22,45 @@ class HomePage extends Component {
     const { users } = this.state;
 
     return (
-      <div>
+      <div className="wrapper">
+      {/* //   <nav id="sidebar">
+      //       <div class="sidebar-header">
+      //           <h3>Bootstrap Sidebar</h3>
+      //       </div>
+
+      //       <ul class="list-unstyled components">
+      //           <p>Menu</p>
+      //           <li class="active">
+      //               <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+      //           </li>
+      //           <li>
+      //               <a href="#">About</a>
+      //           </li>
+      //           <li>
+      //               <a href="#">Portfolio</a>
+      //           </li>
+      //           <li>
+      //               <a href="#">Contact</a>
+      //           </li>
+      //       </ul>
+      //   </nav> */}
         <Navigation />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <h1>Welcome to your Dashboard</h1>
 
 
