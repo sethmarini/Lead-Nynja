@@ -3,24 +3,16 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 // this creates the database
 var profileSchema = new Schema({
-  firstName: String,
-  lastName: Date,
-  phoneNumber: Number,
-  age: Number,
-  address: {
+    firstName: String,
+    lastName: String,
     street: String,
     city: String,
-    state: {
-        type: String,
-        uppercase: true,
-        required: true
-//        enum: statesArray
-    },
-    zip: Number
-},
-    propertyValue: Number,
-    loanAmount: Number,
-
+    state: String,
+    zip: String,
+    propertyValue: String,
+    loanAmount: String,
+    phone: String,
+    email: String
 });
 // this allows interaction with the database
 var Profile = mongoose.model("Profile", profileSchema);

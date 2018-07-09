@@ -46,21 +46,6 @@ class HomePage extends Component {
       //   </nav> */}
         <Navigation />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <h1>Welcome to your Dashboard</h1>
 
 

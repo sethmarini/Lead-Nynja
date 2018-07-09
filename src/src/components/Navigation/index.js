@@ -25,10 +25,6 @@ const NavigationAuth = () => (
 );
 
 const NavigationNonAuth = () => (
-  // <ul>
-  //   <a className="btn btn-primary" role="button"><Link to={routes.SIGN_IN}>Sign In</Link></a>
-  //   <a className="btn btn-primary" role="button"><Link to={routes.LANDING}>Landing</Link></a>
-  // </ul>
   <div className="btn-group" role="group">
     <button id="btnGroupDrop1" type="button" className="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Dropdown
