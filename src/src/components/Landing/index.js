@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
 import profileApi from "../../util/profileApi";
-class LandingPage extends Component{
+// this access the router to the home page from the landing page
+import { withRouter } from 'react-router-dom';
 
+class LandingPage extends Component{
+	// This loads the props 
+	// constructor(props) {
+	// 	super(props);
+	// }
 
 saveProfile = (e) =>{
-		e.preventDefault();
+	// Use history prop which handles browsing history
+	const { history } = this.props;
+	
+	e.preventDefault();
 	profileApi.saveProfile({
 		firstName: document.getElementById("firstName").value,
 		lastName: document.getElementById("lastName").value,
@@ -16,8 +25,9 @@ saveProfile = (e) =>{
 		loanAmount: document.getElementById("inputLB").value,
 		phone: document.getElementById("inputPhone").value,
 		email: document.getElementById("inputEmail").value
-
-});
+	});
+	// Tell browser to go to home page
+	history.push('/home');
 }
 render() {
 	return (
@@ -257,4 +267,5 @@ render() {
 	) 
 }
 }
-export default LandingPage;
+// withRouter is used to access router props
+export default withRouter(LandingPage);

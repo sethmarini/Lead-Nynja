@@ -33,7 +33,7 @@ router.get("/api/profile", profilesController.find);
 // Save profiles
 router.post("/api/profile", profilesController.insert);
 // delete saved profiles
-router.delete("/api/profile:id", profilesController.delete);
+router.delete("/api/profile/:id", profilesController.delete);
 // Send every other request to the React app
 router.get("/*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/public/index.html"))

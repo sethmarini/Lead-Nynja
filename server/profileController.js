@@ -4,11 +4,11 @@ module.exports = {
   // this method handles finding all profiles in the db 
 //   object syntax-using key value pairs
    find: function(req, res) {
-//     Profile.find().then(function(profiles) {
-//       res.json(profiles);
-//     }).catch(function(err) {
-//       res.json(err);
-//     });
+    Profile.find().then(function(profiles) {
+      res.json(profiles);
+    }).catch(function(err) {
+      res.json(err);
+    });
    },
   // this method handles adding new profiles to the db
   insert: function(req, res) {

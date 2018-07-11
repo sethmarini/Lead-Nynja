@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navigation from '../Navigation';
 import withAuthorization from '../Session/withAuthorization';
 import { db } from '../../firebase';
+import Saved from "./Saved";
 
 class HomePage extends Component {
   constructor(props) {
@@ -11,6 +12,15 @@ class HomePage extends Component {
       users: {}
     };
   }
+
+//   axios.get(queryURL)
+//   .then(res =>{
+//     this.setState({
+//       results: res.data.response.docs
+//     })
+//   })
+//   this.displayResults();
+// }
 
   componentDidMount() {
     db.onceGetUsers().then(snapshot =>
@@ -22,7 +32,11 @@ class HomePage extends Component {
     const { users } = this.state;
 
     return (
+      
+        
+      
       <div className="wrapper">
+      <Saved />
       {/* //   <nav id="sidebar">
       //       <div class="sidebar-header">
       //           <h3>Bootstrap Sidebar</h3>
@@ -44,6 +58,7 @@ class HomePage extends Component {
       //           </li>
       //       </ul>
       //   </nav> */}
+      <h1>hello!</h1>
         <Navigation />
 
         <h1>Welcome to your Dashboard</h1>
