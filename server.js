@@ -26,14 +26,14 @@ app.use((req, res, next) => {
 });
 
 // Routing/ api
-var profilesController = require("./server/profileController");
+var leadController = require("./server/leadController");
 var router = new express.Router();
-// Get saved profiles
-router.get("/api/profile", profilesController.find);
-// Save profiles
-router.post("/api/profile", profilesController.insert);
-// delete saved profiles
-router.delete("/api/profile:id", profilesController.delete);
+// Get saved leads
+router.get("/api/lead", leadController.find);
+// Save leads
+router.post("/api/lead", leadController.insert);
+// delete saved leads
+router.delete("/api/lead/:id", leadController.delete);
 // Send every other request to the React app
 router.get("/*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/public/index.html"))
